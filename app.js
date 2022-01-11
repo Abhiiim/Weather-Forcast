@@ -3,7 +3,6 @@ const https = require("https");
 const bodyParser = require("body-parser");
 const _ = require("lodash");
 const moment  = require("moment");
-const today = require(__dirname + "/date.js");
 
 const app = express();
 
@@ -18,15 +17,15 @@ app.get("/", function(req, res){
     temp: "Temp",
     weatherIcon: "Image",
     weatherDesc: "Description",
-    time: today.getTime(),
-    date: today.getDate()
+    time: moment().format('LT'),
+    date: moment().format('dddd') + ", " + moment().format('LL')
   });
 });
 
 app.post("/", function(req, res){
 
   const query = req.body.cityName;
-  const appKey = today.getApiKey();
+  const appKey = "1b2524ed520e1c658ec83fd4b04a8325";
   const unit = "metric";
   const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid="+ appKey +"&units=" + unit;
   https.get(url, function(response){
@@ -48,8 +47,8 @@ app.post("/", function(req, res){
           temp: temp,
           weatherIcon: imageURL,
           weatherDesc: _.startCase(weatherDesc),
-          time: today.getTime(),
-          date: today.getDate()
+          time: moment().format('LT'),
+          date: moment().format('dddd') + ", " + moment().format('LL')
         });
       });
     }
