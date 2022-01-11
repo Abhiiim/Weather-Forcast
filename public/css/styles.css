@@ -1,0 +1,120 @@
+body{
+  margin: 0;
+  text-align: center;
+  background-color: #35589A;
+  background-image: linear-gradient(to right, #35589A, #2F86A6);
+}
+
+.overall{
+  position: relative;
+}
+
+.heading{
+  background-color: #072227;
+}
+
+.heading img{
+  position: absolute;
+  left: 30%;
+  width: 10%;
+}
+
+.heading h1{
+  font-size: 4rem;
+  color: white;
+  margin-top: 0;
+  padding: 1.5%;
+}
+
+.city{
+  margin: auto;
+  color: white;
+}
+
+.form-label{
+  font-size: 1.5rem;
+}
+
+.form-control{
+  width: 50%;
+  margin: auto;
+}
+
+.weather-res{
+  margin: 4% auto;
+  position: relative;
+  color: white;
+}
+
+.weather-res img{
+  position: relative;
+  border-radius: 10px;
+  width: 90%;
+}
+
+.details{
+  position: absolute;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 3%;
+  left: 7%;
+}
+
+.bottom-left h1{
+  font-size: 3rem;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 3%;
+  left: 10%;
+}
+
+.top-left h1{
+  font-size: 3rem;
+}
+
+/* Bottom right text */
+.bottom-center {
+  position: absolute;
+  bottom: 3%;
+  left: 38%;
+}
+
+.bottom-center h1{
+  font-size: 5rem;
+}
+
+/* Centered text */
+.right-part {
+  position: absolute;
+  right: 6%;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.8;
+}
+
+.description{
+  opacity: 1;
+}
+
+/* Footer Section */
+
+#footer{
+  background-color: #072227;
+  text-align: center;
+  padding: 1%;
+  color: white;
+}
+
+.footer-icon{
+  margin: 1%;
+}
